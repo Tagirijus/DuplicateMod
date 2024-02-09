@@ -1,6 +1,6 @@
 <?php
 
-namespace Kanboard\Plugin\DuplicatePlus;
+namespace Kanboard\Plugin\DuplicateMod;
 
 use Kanboard\Core\Plugin\Base;
 use Kanboard\Core\Translator;
@@ -10,15 +10,11 @@ class Plugin extends Base
 {
     public function initialize()
     {
-        // Helper
-        $this->helper->register('duplicatePlusHelper', '\Kanboard\Plugin\DuplicatePlus\Helper\DuplicatePlusHelper');
-
         // Views - Template Hook
         $this->template->hook->attach(
-            'template:config:sidebar', 'DuplicatePlus:config/duplicateplus_config_sidebar');
-
-        // Extra Page - Routes
-        $this->route->addRoute('/duplicateplus/config', 'DuplicatePlusController', 'showConfig', 'DuplicatePlus');
+            'template:task:dropdown:after-duplicate-task', 'DuplicateMod:task/dropdown_addition_before');
+        $this->template->hook->attach(
+            'template:task:sidebar:after-basic-actions', 'DuplicateMod:task/task_sidebar_after');
     }
 
     public function onStartup()
@@ -28,12 +24,12 @@ class Plugin extends Base
 
     public function getPluginName()
     {
-        return 'DuplicatePlus';
+        return 'DuplicateMod';
     }
 
     public function getPluginDescription()
     {
-        return t('An extended task duplication feature');
+        return t('Modificatin of the task duplication controller of Kanban');
     }
 
     public function getPluginAuthor()
@@ -57,6 +53,6 @@ class Plugin extends Base
 
     public function getPluginHomepage()
     {
-        return 'https://github.com/Tagirijus/DuplicatePlus';
+        return 'https://github.com/Tagirijus/DuplicateMod';
     }
 }

@@ -1,5 +1,5 @@
 <?php
 
 return array(
-    'DuplicatePlus configuration' => 'DuplicatePlus Einstellungen',
+    'Duplicate (instant)' => 'Duplizieren (sofort)',
 );

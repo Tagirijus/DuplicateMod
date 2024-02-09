@@ -1,14 +1,8 @@
-# DuplicatePlus
+# DuplicateMod
 
 #### _Plugin for [Kanboard](https://github.com/fguillot/kanboard "Kanboard - Kanban Project Management Software")_
 
-This plugin adds a new _duplicate_ action to Kanboard. The user can set up certain configuration in the settings sectino of Kanboard to modify how the plugin behaves on duplicating a task.
-
-Basically the main reason for this plugin to exist is that:
-
-- Duplication-Question won't be asked
-- User can set up another title, subtask title, estimated time, due date and more on a modal on duplication
-- The new task can be moved automatically after this action into another column
+Alternative duplication controller. As of the start of this project, the plugin only gets rid of the question, if a task should be duplicated.
 
 
 Compatibility
@@ -33,7 +27,7 @@ Installation
 ------------
 
 1. Go into Kanboards `plugins/` folder
-2. `git clone https://github.com/Tagirijus/DuplicatePlus`
+2. `git clone https://github.com/Tagirijus/DuplicateMod`
 
 
 Translations
