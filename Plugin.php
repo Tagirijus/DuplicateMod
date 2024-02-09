@@ -14,7 +14,7 @@ class Plugin extends Base
         $this->template->hook->attach(
             'template:task:dropdown:after-duplicate-task', 'DuplicateMod:task/dropdown_addition_before');
         $this->template->hook->attach(
-            'template:task:sidebar:actions', 'DuplicateMod:task/task_sidebar_after');
+            'template:task:sidebar:after-duplicate-task', 'DuplicateMod:task/task_sidebar_after');
     }
 
     public function onStartup()
