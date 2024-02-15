@@ -4,6 +4,8 @@
 
 Alternative duplication controller. As of the start of this project, the plugin only gets rid of the question, if a task should be duplicated.
 
+Since v1.1 it also has a config setting to set a custom duplication prefix for the duplicated task title (or leave it blank to have none!). Also since this version the plugin can add a week number to the week pattern, yet this needs the [WeekHelper](https://github.com/Tagirijus/WeekHelper) >=v2.7.0 plugin to work.
+
 
 Compatibility
 -------------
