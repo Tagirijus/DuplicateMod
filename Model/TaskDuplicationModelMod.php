@@ -57,6 +57,13 @@ class TaskDuplicationModelMod extends Base
             $values['title'] = t('[DUPLICATE]').' '.$values['title'];
         }
 
+        if ($this->configModel->get('duplicatemod_weekadd_enabled', 1) == 1) {
+            if (file_exists('plugins/WeekHelper')) {
+                $values['title'] = $this->helper->weekHelperHelper->addOneWeekToGivenTitle($values['title']);
+            }
+        }
+
+
         $new_task_id = $this->save($task_id, $values);
 
         if ($new_task_id !== false) {

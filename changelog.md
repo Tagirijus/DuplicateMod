@@ -7,6 +7,7 @@
 
 _(most recent changes are listed on top):_
 - Added config: prefix
+- Added config+feature: week pattern modification on duplication (needs the [WeekHelper](https://github.com/Tagirijus/WeekHelper) plugin!)
 
 
 ## v1.0

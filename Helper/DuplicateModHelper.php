@@ -19,8 +19,7 @@ class DuplicateModHelper extends Base
 
             // values
             'prefix' => $this->configModel->get('duplicatemod_prefix', ''),
-            // 'headerdate_enabled' => $this->configModel->get('weekhelper_headerdate_enabled', 1),
-            // 'week_pattern' => $this->configModel->get('weekhelper_week_pattern', '{YEAR_SHORT}W{WEEK}'),
+            'weekadd_enabled' => $this->configModel->get('duplicatemod_weekadd_enabled', 1),
         ];
     }
 
@@ -34,8 +33,7 @@ class DuplicateModHelper extends Base
     {
         return [
             'duplicatemod_prefix' => $form['prefix'],
-            // 'weekhelper_headerdate_enabled' => isset($form['headerdate_enabled']) ? 1 : 0,
-            // 'weekhelper_week_pattern' => $form['week_pattern'],
+            'duplicatemod_weekadd_enabled' => isset($form['weekadd_enabled']) ? 1 : 0,
         ];
     }
 }
