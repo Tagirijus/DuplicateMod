@@ -53,8 +53,9 @@ class TaskDuplicationModelMod extends Base
     {
         $values = $this->copyFields($task_id);
 
-        if ($this->configModel->get('duplicatemod_prefix', '') != '') {
-            $values['title'] = t('[DUPLICATE]').' '.$values['title'];
+        $prefix = $this->configModel->get('duplicatemod_prefix', '');
+        if ($prefix != '') {
+            $values['title'] = t($prefix).' '.$values['title'];
         }
 
         if ($this->configModel->get('duplicatemod_weekadd_enabled', 1) == 1) {
