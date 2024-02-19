@@ -31,6 +31,22 @@
 
     </div>
 
+    <br>
+    <br>
+
+    <div class="task-form-container">
+
+        <div class="task-form-main-column">
+            <?= $this->form->label(t('Add days to due date on duplication (leave empty and the due date will be removed on duplication).'), 'duedaysadd') ?>
+            <?= $this->form->text('duedaysadd', ['duedaysadd' => $duedaysadd], [], [
+                '',
+                '',
+                'placeholder="' . t('number or leave blank') . '"'
+            ]) ?>
+        </div>
+
+    </div>
+
 
     <div class="task-form-bottom">
         <?= $this->modal->submitButtons() ?>

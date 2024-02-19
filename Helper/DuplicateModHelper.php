@@ -20,6 +20,7 @@ class DuplicateModHelper extends Base
             // values
             'prefix' => $this->configModel->get('duplicatemod_prefix', ''),
             'weekadd_enabled' => $this->configModel->get('duplicatemod_weekadd_enabled', 1),
+            'duedaysadd' => $this->configModel->get('duplicatemod_duedaysadd', ''),
         ];
     }
 
@@ -34,6 +35,7 @@ class DuplicateModHelper extends Base
         return [
             'duplicatemod_prefix' => $form['prefix'],
             'duplicatemod_weekadd_enabled' => isset($form['weekadd_enabled']) ? 1 : 0,
+            'duplicatemod_duedaysadd' => $form['duedaysadd'],
         ];
     }
 }

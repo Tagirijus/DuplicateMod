@@ -64,6 +64,19 @@ class TaskDuplicationModelMod extends Base
             }
         }
 
+        $duedaysadd = $this->configModel->get('duplicatemod_duedaysadd', 7);
+        if ($values['date_due'] != 0) {
+            if ($duedaysadd !== '') {
+                $days = (int) $duedaysadd;
+                $dueDate = new \DateTime();
+                $dueDate->setTimestamp($values['date_due']);
+                $dueDate->modify('+' . $days . ' days');
+                $values['date_due'] = $dueDate->getTimestamp();
+            } else {
+                $values['date_due'] = 0;
+            }
+        }
+
 
         $new_task_id = $this->save($task_id, $values);
 
